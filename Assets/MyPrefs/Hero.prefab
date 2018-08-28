@@ -214,7 +214,8 @@ GameObject:
   - component: {fileID: 50792845569505998}
   - component: {fileID: 70505294881610248}
   - component: {fileID: 114089401723732444}
-  - component: {fileID: 95649625444562774}
+  - component: {fileID: 95537604641168782}
+  - component: {fileID: 114171605337936988}
   m_Layer: 12
   m_Name: Hero
   m_TagString: Player
@@ -415,7 +416,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1140660704701194}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 22.955692, y: 6.1402173, z: -4}
+  m_LocalPosition: {x: -2.2, y: 1.5, z: -4}
   m_LocalScale: {x: 2.4, y: 2.4, z: 2.4}
   m_Children: []
   m_Father: {fileID: 4506123693073646}
@@ -456,7 +457,7 @@ Transform:
   m_GameObject: {fileID: 1802695726354806}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalScale: {x: -0.25, y: 0.25, z: 0.25}
   m_Children:
   - {fileID: 4130012777929556}
   - {fileID: 4245034403133664}
@@ -474,7 +475,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 4
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -482,7 +483,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!70 &70505294881610248
 CapsuleCollider2D:
   m_ObjectHideFlags: 1
@@ -495,8 +496,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.3791914}
-  m_Size: {x: 3.585825, y: 8.662264}
+  m_Offset: {x: 0, y: -0.15007496}
+  m_Size: {x: 3.585825, y: 8.204031}
   m_Direction: 0
 --- !u!82 &82004496070808876
 AudioSource:
@@ -593,7 +594,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!95 &95649625444562774
+--- !u!95 &95537604641168782
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
@@ -627,6 +628,21 @@ MonoBehaviour:
   facingRight: 1
   jump: 0
   jumpForce: 1400
+--- !u!114 &114171605337936988
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1802695726354806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90e1d1d2b08009e44ba977c734c2dcc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bombCount: 5
+  maxBombCount: 5
+  bombsAway: {fileID: 8300000, guid: 238da4efc08184aee919af254edb2ef1, type: 3}
+  bomb: {fileID: 100000, guid: 9f1c955688b614b259cf703b0b1c73d2, type: 2}
 --- !u!114 &114911773438455918
 MonoBehaviour:
   m_ObjectHideFlags: 1
