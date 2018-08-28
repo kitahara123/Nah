@@ -52,17 +52,9 @@ public class RangerEnemy : Enemy {
 	}
 	void Shoot()
 	{
+		Rigidbody2D bulletInstance = Instantiate(rocket, gun.position, Quaternion.Euler(new Vector3(0, 0, facingRight ? 0 : 180f))) as Rigidbody2D;
+		bulletInstance.AddForce((dir) * bulletSpeed);
 
-		if (facingRight)
-		{
-			Rigidbody2D bulletInstance = Instantiate(rocket, gun.position, Quaternion.Euler(new Vector3(0, 0, 0))) as Rigidbody2D;
-			bulletInstance.AddForce( (transform.up + transform.right) * bulletSpeed);
-		}
-		else
-		{
-			Rigidbody2D bulletInstance = Instantiate(rocket, gun.position, Quaternion.Euler(new Vector3(0, 0, 180f))) as Rigidbody2D;
-			bulletInstance.AddForce((transform.up + transform.right * -1) * bulletSpeed);
-		}
 		onCooldown = false;
 	}
 
