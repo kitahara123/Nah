@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 11400000}
   m_Layer: 0
   m_Name: spawner
-  m_TagString: Untagged
+  m_TagString: Respawn
   m_Icon: {fileID: -1003283189, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -40,8 +40,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.847107, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400002}
@@ -69,14 +69,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26e8197b97b4a4fa2ab4c51e208a70f4, type: 3}
+  m_Script: {fileID: 11500000, guid: 953126716d613584aa4c28f3cded75ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnTime: 4
-  spawnDelay: 2
+  spawnTime: 5
+  spawnDelay: 3
   enemies:
   - {fileID: 100000, guid: 4c5736ea0764d49c3a6adc2250d33f0f, type: 2}
   - {fileID: 100006, guid: 66fe2da2077f94183ae003dde85a8b1a, type: 2}
+  onOff: 0
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -85,10 +86,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 100002}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c8afc2d208205641bd1aa5e27769e11, type: 3}
+  m_Script: {fileID: 11500000, guid: 667aee4e5f7cf4140853dba298980384, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sortingLayerName: UI
+  sortingLayerName: Foreground
 --- !u!198 &19800002
 ParticleSystem:
   m_ObjectHideFlags: 1

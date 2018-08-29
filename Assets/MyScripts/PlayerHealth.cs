@@ -34,13 +34,14 @@ public class PlayerHealth : MonoBehaviour
 	{
 		if(col.gameObject.tag == "Enemy" || col.gameObject.tag == "Bullet")
 		{
+			if (col.gameObject.tag == "Bullet") Destroy(col.gameObject);
+
 			// Короткое бессмертие после получения удара
 			if (Time.time > lastHitTime + repeatDamagePeriod) 
 			{
 				if(health > 0f)
 				{
 					TakeDamage(col.transform);
-					if (col.gameObject.tag == "Bullet") Destroy(col.gameObject);
 
 					lastHitTime = Time.time; 
 				}

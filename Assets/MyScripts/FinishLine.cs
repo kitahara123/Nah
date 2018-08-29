@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FinishLine : MonoBehaviour {
 
@@ -20,7 +21,7 @@ public class FinishLine : MonoBehaviour {
 			transform.GetChild(1).GetComponent<ParticleSystem>().Play();
 			transform.GetChild(2).GetComponent<ParticleSystem>().Play();
 
-			GameObject.FindWithTag("Finish").transform.GetChild(0).gameObject.SetActive(true);
+			GameObject.FindWithTag("Finish").GetComponent<Text>().enabled = true;
 
 		}
 
