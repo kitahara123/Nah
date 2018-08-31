@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
-public class BlockFireForAndroidButtons : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler
+public class BlockFireForAndroidButtons : MonoBehaviour, IPointerDownHandler
 {
 
 	public UnityEvent OnClickDown;
@@ -27,8 +27,4 @@ public class BlockFireForAndroidButtons : MonoBehaviour, IPointerDownHandler, IP
 		OnClickDown.Invoke();
 	}
 
-	public void OnPointerEnter(PointerEventData eventData)
-	{
-		OnClickDown.Invoke();
-	}
 }
