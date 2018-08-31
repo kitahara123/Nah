@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\MyScripts\BlockFireForAndroidButtons.cs" />
+     <Compile Include="Assets\MyScripts\Border.cs" />
      <Compile Include="Assets\MyScripts\CameraFollowPlayer.cs" />
      <Compile Include="Assets\MyScripts\EnemyRocket.cs" />
      <Compile Include="Assets\MyScripts\FinishLine.cs" />
@@ -63,6 +64,7 @@
      <Compile Include="Assets\MyScripts\PlayerHealth.cs" />
      <Compile Include="Assets\MyScripts\RangerEnemy.cs" />
      <Compile Include="Assets\MyScripts\Spawner.cs" />
+     <Compile Include="Assets\MyScripts\Ui_Script.cs" />
      <Compile Include="Assets\Scripts\BackgroundParallax.cs" />
      <Compile Include="Assets\Scripts\BackgroundPropSpawner.cs" />
      <Compile Include="Assets\Scripts\Bomb.cs" />
@@ -78,7 +80,6 @@
      <Compile Include="Assets\Scripts\Rocket.cs" />
      <Compile Include="Assets\Scripts\Rotator.cs" />
      <Compile Include="Assets\Scripts\SetParticleSortingLayer.cs" />
-     <Compile Include="Assets\Scripts\Ui_Script.cs" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>C:/Unity/NahProject/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>
