@@ -243,8 +243,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 3
   HP: 2
-  deadEnemy: {fileID: 0}
-  damagedEnemy: {fileID: 0}
+  deadEnemy: {fileID: 21300000, guid: 73fa5f80d4ddd4196b767cc01c1b5c68, type: 3}
+  damagedEnemy: {fileID: 21300000, guid: bc16422a503ec43cab4ad9ddab02ff7a, type: 3}
   deathClips:
   - {fileID: 8300000, guid: 039514349165244c6a43be5c3070d14b, type: 3}
   - {fileID: 8300000, guid: 85020549641fa452d9136ac2fc852efd, type: 3}

@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\MyScripts\BlockFireForAndroidButtons.cs" />
+     <Compile Include="Assets\MyScripts\Bomb.cs" />
      <Compile Include="Assets\MyScripts\Border.cs" />
      <Compile Include="Assets\MyScripts\CameraFollowPlayer.cs" />
      <Compile Include="Assets\MyScripts\EnemyRocket.cs" />
@@ -63,23 +64,14 @@
      <Compile Include="Assets\MyScripts\MyPlayerController.cs" />
      <Compile Include="Assets\MyScripts\PlayerHealth.cs" />
      <Compile Include="Assets\MyScripts\RangerEnemy.cs" />
+     <Compile Include="Assets\MyScripts\SetParticleSortingLayer.cs" />
      <Compile Include="Assets\MyScripts\Spawner.cs" />
      <Compile Include="Assets\MyScripts\Ui_Script.cs" />
      <Compile Include="Assets\Scripts\BackgroundParallax.cs" />
-     <Compile Include="Assets\Scripts\BackgroundPropSpawner.cs" />
-     <Compile Include="Assets\Scripts\Bomb.cs" />
-     <Compile Include="Assets\Scripts\BombPickup.cs" />
-     <Compile Include="Assets\Scripts\CameraFollow.cs" />
      <Compile Include="Assets\Scripts\Destroyer.cs" />
      <Compile Include="Assets\Scripts\Enemy.cs" />
-     <Compile Include="Assets\Scripts\FollowPlayer.cs" />
-     <Compile Include="Assets\Scripts\HealthPickup.cs" />
-     <Compile Include="Assets\Scripts\Pauser.cs" />
-     <Compile Include="Assets\Scripts\PickupSpawner.cs" />
-     <Compile Include="Assets\Scripts\Remover.cs" />
      <Compile Include="Assets\Scripts\Rocket.cs" />
      <Compile Include="Assets\Scripts\Rotator.cs" />
-     <Compile Include="Assets\Scripts\SetParticleSortingLayer.cs" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>C:/Unity/NahProject/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>

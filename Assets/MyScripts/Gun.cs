@@ -30,7 +30,7 @@ public class Gun : MonoBehaviour
 		bool shoot = Input.GetButtonDown("Fire1");
 
 		#if UNITY_STANDALONE_WIN || UNITY_EDITOR_WIN
-		//MousePos = Input.mousePosition;
+		MousePos = Input.mousePosition;
 		#endif
 
 		#if UNITY_ANDROID

@@ -13,6 +13,7 @@ public class Ui_Script : MonoBehaviour {
 	
 	void Update () {
 
+		// След от пальца just for fun
 		if (Input.touchCount > 0) {
 
 			Vector2 v = Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position);
@@ -22,7 +23,7 @@ public class Ui_Script : MonoBehaviour {
 
 		if (Input.GetButtonDown("Cancel"))
 		{
-			menu.SetActive(!menu.activeInHierarchy);
+			menu.SetActive(!menu.activeInHierarchy); // Включаем и выключаем меню
 		}
 
 		if (menu.activeInHierarchy)

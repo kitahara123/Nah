@@ -8,7 +8,7 @@ public class Enemy : MonoBehaviour
 	public Sprite deadEnemy;            // A sprite of the enemy when it's dead.
 	public Sprite damagedEnemy;         // An optional sprite of the enemy when it's damaged.
 	public AudioClip[] deathClips;      // An array of audioclips that can play when the enemy dies.
-	public int obsession = 10;
+	public int obsession = 10; // Как далеко будет преследовать
 	public float deathSpinMin = -100f;          // A value to give the minimum amount of Torque when dying
 	public float deathSpinMax = 100f;           // A value to give the maximum amount of Torque when dying
 
@@ -22,7 +22,6 @@ public class Enemy : MonoBehaviour
 
 	void Awake()
 	{
-		// Setting up the references.
 		ren = transform.Find("body").GetComponent<SpriteRenderer>();
 		player = GameObject.FindWithTag("Player");
 		respawn = transform.position;
@@ -39,70 +38,49 @@ public class Enemy : MonoBehaviour
 			dir = respawn - transform.position; // Отправляемся на респаун
 
 		if (dir.x < 0 && transform.localScale.x > 0) Flip();
-
 		if (dir.x > 0 && transform.localScale.x < 0) Flip();
 
 		GetComponent<Rigidbody2D>().velocity = new Vector2(Mathf.Clamp(dir.x, -moveSpeed, moveSpeed), GetComponent<Rigidbody2D>().velocity.y);
 
-		// If the enemy has one hit point left and has a damagedEnemy sprite...
 		if (HP == 1 && damagedEnemy != null)
-			// ... set the sprite renderer's sprite to be the damagedEnemy sprite.
 			ren.sprite = damagedEnemy;
 
-		// If the enemy has zero or fewer hit points and isn't dead yet...
 		if (HP <= 0 && !dead)
-			// ... call the death function.
 			Death();
 	}
 
 	public void Hurt()
 	{
-		// Reduce the number of hit points by one.
 		HP--;
 	}
 
 	protected void Death()
 	{
-		// Find all of the sprite renderers on this object and it's children.
+		// Выключаем все ненужные спрайты
 		SpriteRenderer[] otherRenderers = GetComponentsInChildren<SpriteRenderer>();
-
-		// Disable all of them sprite renderers.
 		foreach (SpriteRenderer s in otherRenderers)
 		{
 			s.enabled = false;
 		}
 
-		// Re-enable the main sprite renderer and set it's sprite to the deadEnemy sprite.
+		// Включаем тело и ставим спрайт трупа
 		ren.enabled = true;
 		ren.sprite = deadEnemy;
 
-		// Increase the score by 100 points
-		//score.score += 100;
-
-		// Set dead to true.
 		dead = true;
 
-		// Allow the enemy to rotate and spin it by adding a torque.
 		GetComponent<Rigidbody2D>().AddTorque(Random.Range(deathSpinMin, deathSpinMax));
 
-		// Find all of the colliders on the gameobject and set them all to be triggers.
 		Collider2D[] cols = GetComponents<Collider2D>();
 		foreach (Collider2D c in cols)
 		{
 			c.isTrigger = true;
 		}
 
-		// Play a random audioclip from the deathClips array.
 		int i = Random.Range(0, deathClips.Length);
 		AudioSource.PlayClipAtPoint(deathClips[i], transform.position);
 
-		// Create a vector that is just above the enemy.
-		Vector3 scorePos;
-		scorePos = transform.position;
-		scorePos.y += 1.5f;
-
-		// Instantiate the 100 points prefab at this point.
-		//Instantiate(hundredPointsUI, scorePos, Quaternion.identity);
+		Destroy(gameObject, 2);
 	}
 
 

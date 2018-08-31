@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class EnemyRocket : MonoBehaviour
 {
-
-
 	void Start()
 	{
 		Destroy(gameObject, 2);
