@@ -7,7 +7,7 @@ public class Bomb : MonoBehaviour
 	public float bombForce = 100f;          // Force that enemies are thrown from the blast.
 	public AudioClip boom;                  // Audioclip of explosion.
 	public AudioClip fuse;                  // Audioclip of fuse.
-	public float fuseTime = 1.5f;
+	public float fuseTime = 1.5f; // Время заряда мины
 	public GameObject explosion;            // Prefab of explosion effect.
 
 	private ParticleSystem explosionFX;     // Reference to the particle system of the explosion effect.

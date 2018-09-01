@@ -18,9 +18,8 @@ public class FinishLine : MonoBehaviour {
 			}
 
 			//Firework
-			transform.GetChild(0).GetComponent<ParticleSystem>().Play();
-			transform.GetChild(1).GetComponent<ParticleSystem>().Play();
-			transform.GetChild(2).GetComponent<ParticleSystem>().Play();
+			foreach (Transform c in transform)
+				c.GetComponent<ParticleSystem>().Play();
 
 			//WINNER WINNER CHICKEN DINNER
 			GameObject.FindWithTag("Finish").GetComponent<Text>().enabled = true;
