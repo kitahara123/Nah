@@ -5153,6 +5153,16 @@ Prefab:
       propertyPath: m_Size.x
       value: 17.327414
       objectReference: {fileID: 0}
+    - target: {fileID: 61036833429090956, guid: 3b28f20b5daf01f48a850f1869b28835,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 1debb068374764196a01e1c69c1f413f, type: 2}
+    - target: {fileID: 61036833429090956, guid: 3b28f20b5daf01f48a850f1869b28835,
+        type: 2}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 17.327414
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b28f20b5daf01f48a850f1869b28835, type: 2}
   m_IsPrefabAsset: 0
@@ -10880,7 +10890,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22400002, guid: 9529ecc3d479da5499993355e6c2cb4f, type: 2}
       propertyPath: m_AnchorMax.x
-      value: 0.2
+      value: 0.25892517
       objectReference: {fileID: 0}
     - target: {fileID: 22400002, guid: 9529ecc3d479da5499993355e6c2cb4f, type: 2}
       propertyPath: m_AnchoredPosition.x
@@ -10896,7 +10906,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22400002, guid: 9529ecc3d479da5499993355e6c2cb4f, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0.2627022
+      value: 0.35693622
       objectReference: {fileID: 0}
     - target: {fileID: 11400008, guid: 9529ecc3d479da5499993355e6c2cb4f, type: 2}
       propertyPath: axesToUse
@@ -35952,6 +35962,11 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -0.018000001
       objectReference: {fileID: 0}
+    - target: {fileID: 61036833429090956, guid: 3b28f20b5daf01f48a850f1869b28835,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 1debb068374764196a01e1c69c1f413f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b28f20b5daf01f48a850f1869b28835, type: 2}
   m_IsPrefabAsset: 0
@@ -41393,7 +41408,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a588dae63cb5f04c94f1feb745a2011, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offset: {x: 0, y: 0, z: 0}
   margin: 2
   smooth: 3.4
 --- !u!1 &1508178426
@@ -46664,7 +46678,7 @@ Prefab:
     - target: {fileID: 61036833429090956, guid: 3b28f20b5daf01f48a850f1869b28835,
         type: 2}
       propertyPath: m_SpriteTilingProperty.newSize.x
-      value: 17.327414
+      value: 12.367662
       objectReference: {fileID: 0}
     - target: {fileID: 4105320672236902, guid: 3b28f20b5daf01f48a850f1869b28835, type: 2}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -46674,6 +46688,11 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -0.018000001
       objectReference: {fileID: 0}
+    - target: {fileID: 61036833429090956, guid: 3b28f20b5daf01f48a850f1869b28835,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 1debb068374764196a01e1c69c1f413f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b28f20b5daf01f48a850f1869b28835, type: 2}
   m_IsPrefabAsset: 0
