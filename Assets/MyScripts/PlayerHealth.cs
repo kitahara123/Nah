@@ -34,18 +34,17 @@ public class PlayerHealth : MonoBehaviour
 	{
 		if(col.gameObject.tag == "Enemy" || col.gameObject.tag == "Bullet")
 		{
-			if (col.gameObject.tag == "Bullet") Destroy(col.gameObject);
-
 			// Короткое бессмертие после получения удара
 			if (Time.time > lastHitTime + repeatDamagePeriod) 
 			{
-				if(health > 0f)
+				if(health > 0)
 				{
 					TakeDamage(col.transform);
 
 					lastHitTime = Time.time; 
 				}
-				else
+				
+				if (health <= 0)
 				{
 
 					// Если жизни закончились переключаем коллайдеры в триггер и падаем

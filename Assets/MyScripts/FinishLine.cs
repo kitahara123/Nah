@@ -14,13 +14,14 @@ public class FinishLine : MonoBehaviour {
 			GameObject[] spawns = GameObject.FindGameObjectsWithTag("Respawn");
 			foreach (GameObject spawn in spawns)
 			{
-				spawn.GetComponent<Spawner>().onOff = false;
+				spawn.GetComponent<Spawner>().onOff = false; // Выключаем спавн мобов
 			}
 
-			transform.GetChild(0).GetComponent<ParticleSystem>().Play();
-			transform.GetChild(1).GetComponent<ParticleSystem>().Play();
-			transform.GetChild(2).GetComponent<ParticleSystem>().Play();
+			//Firework
+			foreach (Transform c in transform)
+				c.GetComponent<ParticleSystem>().Play();
 
+			//WINNER WINNER CHICKEN DINNER
 			GameObject.FindWithTag("Finish").GetComponent<Text>().enabled = true;
 
 		}

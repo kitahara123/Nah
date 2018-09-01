@@ -32,7 +32,10 @@ public class MyPlayerController : MonoBehaviour
 		// Проверяем, что персонаж касается земли
 		grounded = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
 
+		#if UNITY_STANDALONE_WIN || UNITY_EDITOR_WIN
 		jump = Input.GetButtonDown("Jump");
+		#endif
+
 		#if UNITY_ANDROID
 		jump = CrossPlatformInputManager.GetButtonDown("Jump");
 		#endif
@@ -52,7 +55,10 @@ public class MyPlayerController : MonoBehaviour
 	void FixedUpdate()
 	{
 		float sp = 0f;
+		#if UNITY_STANDALONE_WIN || UNITY_EDITOR_WIN
 		sp = Input.GetAxis("Horizontal");
+		#endif
+
 		#if UNITY_ANDROID
 		sp = CrossPlatformInputManager.GetAxis("Horizontal");
 		#endif

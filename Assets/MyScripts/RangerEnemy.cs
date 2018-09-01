@@ -26,23 +26,22 @@ public class RangerEnemy : Enemy {
 
 		if (Mathf.Abs(dir.x) > obsession) // Если игрок убежал слишком далеко
 		{ 
-			dir = respawn - transform.position; // Отправляемся на респаун
+			dir = respawn - transform.position; // Отправляемся на респавн
 		}
 
 		if (dir.x < 0 && transform.localScale.x > 0) Flip();
 		if (dir.x > 0 && transform.localScale.x < 0) Flip();
 
-		RaycastHit2D hit = Physics2D.Raycast(transform.position, dir, 5, mask);
+		RaycastHit2D hit = Physics2D.Raycast(transform.position, dir, 5, mask); // Ищем игрока на дистанции до 5 перед собой
 
-		if (hit.collider == null)
+		if (hit.collider == null) // Не нашли идём на спавн
 			GetComponent<Rigidbody2D>().velocity = new Vector2(Mathf.Clamp(dir.x, -moveSpeed, moveSpeed), GetComponent<Rigidbody2D>().velocity.y);
 		else
 		{
-			if (!onCooldown)
+			if (!onCooldown && !dead) // Стреляем в игрока
 				Invoke("Shoot", 2);
 			onCooldown = true;
 		}
-
 
 		if (HP == 1 && damagedEnemy != null)
 			ren.sprite = damagedEnemy;

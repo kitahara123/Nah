@@ -4,18 +4,14 @@ using UnityEngine;
 
 public class EnemyRocket : MonoBehaviour
 {
-
-
 	void Start()
 	{
 		Destroy(gameObject, 2);
 	}
 
-	void OnTriggerEnter2D(Collider2D col)
+	void OnCollisionEnter2D(Collision2D col)
 	{
-		if (col.tag == "Player")
-		{
+			if (col.gameObject.tag == "ground" || col.gameObject.tag == "Player")
 			Destroy(gameObject);
-		}
 	}
 }

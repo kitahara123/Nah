@@ -4,13 +4,14 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
-public class BlockFireForAndroidButtons : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler
+/// <summary>
+/// Используется для блокировки выстрелов при нажатии на touch кнопки
+/// </summary>
+public class BlockFireForAndroidButtons : MonoBehaviour, IPointerDownHandler
 {
 
 	public UnityEvent OnClickDown;
-
-
-
+	
 	void Start () {
 
 		if (OnClickDown == null)
@@ -27,8 +28,4 @@ public class BlockFireForAndroidButtons : MonoBehaviour, IPointerDownHandler, IP
 		OnClickDown.Invoke();
 	}
 
-	public void OnPointerEnter(PointerEventData eventData)
-	{
-		OnClickDown.Invoke();
-	}
 }

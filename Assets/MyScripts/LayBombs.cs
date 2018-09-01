@@ -19,10 +19,10 @@ public class LayBombs : MonoBehaviour
 
 	void Update ()
 	{
-		//Используется в винде и редакторе
+		#if UNITY_STANDALONE_WIN || UNITY_EDITOR_WIN
 		doBomb = Input.GetButtonDown("Fire2");
+		#endif
 
-		//Используется в Андройде
 		#if UNITY_ANDROID
 		doBomb = CrossPlatformInputManager.GetButtonDown("Fire2");
 		#endif
